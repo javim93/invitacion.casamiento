@@ -1,0 +1,419 @@
+/*===============================REGLAS GENERALES===============================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Dumbledor 1', sans-serif;
+    font-weight: 500;
+    --main-green: #0E3826;
+    --main-green-light: #196645;
+    --main-gold: #B6A05D;
+    --maing-gold-dark: #A4853C;
+    --main-gold-light: #CEB77C;
+    --shadow: 5px 5px 15px black;
+    color: var(--main-gold);
+}
+@font-face {
+    font-family: 'cayed';
+    src: url('font/cayed.ttf');
+}
+body {
+    overflow-x: hidden;
+}
+
+/*==================================CELULARES==================================*/
+/*=====Toda pantalla que tenga menos de 1024px de ancho tendrá este estilo=====*/
+@media screen and (max-width: 1023px) {
+
+    body {
+        overflow-x: hidden;
+    }
+    /*================================CABECERA================================*/
+    /*LANDING*/
+    .welcomeImgWrapper {
+        position: relative;
+        height: 40.5rem;
+    }
+    .welcomeImg, .filtro {
+        width: 100%;
+        position: absolute;    
+    }
+    
+    /*NAVBAR*/
+    .navBar {
+        width: 100%;
+        height: 5rem;
+        background-image: linear-gradient(to right, var(--maing-gold-dark), var(--main-gold-light), var(--maing-gold-dark));
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .navBarButton {
+        width: 13%;
+        text-align: center;
+    }
+    .navBarSeparator, 
+    .navBarLink:link,
+    .navBarLink:visited {
+        font-size: 1.65rem;
+        color: var(--main-green);
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .navBarLink:hover,
+    .navBarLink:active {
+        text-decoration: overline;
+    }
+    /*================================INVITACION================================*/
+    .invitacionContainer {
+        width: 100%;
+        /*height: 78rem;*/
+        background-color: var(--main-green);
+        /*border-bottom: 10px solid var(--main-gold);*/
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+    }
+    .invitacionWrapper {        
+        width: 80%;
+        text-align: center;
+        padding-top: 5rem;
+    }
+    .titulo {
+        text-shadow: var(--shadow);
+    }
+    .principal {
+        font-size: 6rem;
+    }
+    .subtitulo {
+        font-size: 5.5rem;
+    }
+    .anuncio {
+        font-size: 5.7rem;
+        padding-top: 10rem;
+    }
+    .countDown {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 9rem 0;
+    }
+    .countDownBox {
+        width: 25%;
+    }
+    .timer, .countDownSeparator, .unit {
+        font-size: 6rem;
+        text-shadow: var(--shadow);
+    }
+    .unit, .countDownSeparator {
+        font-size: 2rem;
+    }
+    .dragones {
+        width: 100%;
+        position: absolute;
+        top: 4.5rem;
+        z-index: 1;
+    }
+    /*=============================NUESTRA HISTORIA=============================*/
+    .historiaWrapper {
+        position: relative;
+        width: 100%;
+        background-color: var(--main-green);
+        height: 162.5rem;
+    }
+    .historiaTitulo {
+        font-size: 4rem;
+        text-shadow: var(--shadow);
+        padding: 2rem 0 0 3rem;
+    }
+    .historia-1 {
+        width: 100%;
+    }
+    .inicioHistoria {
+        font-size: 3.5rem;
+        padding: 3rem 0 0 3rem;
+        text-shadow: var(--shadow);
+    }
+    .parrafoHistoria {
+        font-size: 2.1rem;
+        text-align: justify;
+        position: absolute;
+        text-shadow: var(--shadow);
+        /*font-weight: 600;*/
+    }
+    .parrafo-1 {
+        top: 57rem;
+        left: 3.5rem;
+        width: 76%;
+        /*padding: 3rem 6rem 0 3.5rem;*/
+    }
+    .parrafo-2 {
+        top: 77rem;
+        right: 3.5rem;
+        width: 45%;
+    }
+    .parrafo-3 {
+        width: 38%;
+        top: 108.5rem;
+        left: 3.5rem;
+    }
+    .parrafo-4 {
+        width: 50%;
+        top: 125.5rem;
+        left: 5.5rem;
+    }
+    .parrafo-5 {
+        width: 80%;
+        top: 142rem;
+        right: 3.5rem;
+    }
+    .historiaImg {
+        width: 31%;
+        position: absolute;
+        border: 1px solid var(--main-gold)
+    }
+    .historia-2 {
+        top: 78rem;
+        left: 3rem;
+    }
+    .historia-3 {
+        top: 92rem;
+        left: 9rem;
+    }
+    .historia-4 {
+        top: 100rem;
+        left: 28rem;
+    }
+    .historia-5 {
+        top: 114rem;
+        right: 3rem;
+    }
+    .hechizo {
+        position: absolute;
+    }
+    .hechizo-1 {
+        width: 18%;
+        right: 0;
+    }
+    .hechizo-2 {
+        width: 26%;
+        left: -7rem;
+        top: 145rem;
+    }
+    .hechizo-3 {
+        width: 11%;
+        right: 6rem;
+        top: 104rem;
+    }
+    /*=======================INVITACION (IGLESIA + SALON)=======================*/
+    .informacionWrapper {
+        width: 100%;
+        background-color: var(--main-green);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .infoTitulo {
+        width: 100%;
+        text-align: center;
+        font-size: 3.75rem;
+        padding-top: 3.75rem;
+        text-shadow: var(--shadow);
+    }
+    .detallesWrapper {
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        padding: 5rem 0;
+    }
+    .invitacionDetallesContainer, .nombreContainer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .invitacionDetallesContainer {
+        padding-left: 2rem;
+    }
+    .detallesNombre {
+        font-size: 2.2rem;
+        padding-bottom: 1.5rem;
+        text-shadow: var(--shadow);
+    }
+    .detallesInfo {
+        font-size: 1.75rem;
+        padding: 0.5rem 0;
+        text-shadow: var(--shadow);
+    }
+    .logo {
+        width: 1.5rem;
+        margin: 0 0.75rem;
+    }
+    .detallesLinkContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    .detallesLinkDecoration, 
+    .detallesLink:link, 
+    .detallesLink:visited,
+    .detallesLink:hover,
+    .detallesLink:active {
+        font-size: 2.2rem;
+        text-shadow: var(--shadow);
+    }
+    .detallesLink:hover, .detallesLink:active {
+        text-decoration: overline;
+    }
+    .detallesLinkDecoration {
+        margin: 0 0.5rem;
+    }
+    .infoImg {
+        width: 40%;
+        border: 1px solid var(--main-gold);
+    }
+    /*===============================NOCHE MAGICA===============================*/
+    
+    /*SPOTIFY*/
+    .nocheMagicaWrapper {
+        width: 100%;
+        background-color: var(--main-green);
+    }
+    .hechizo-4 {
+        width: 30%;
+        left: 35%;
+        padding-top: 5rem;
+    }
+    .nocheMagicaTitle {
+        text-align: center;
+        font-size: 5rem;
+        text-shadow: var(--shadow);
+        padding-top: 40rem;
+    }
+    .recomendaMusica {
+        text-align: center;
+        font-size: 2.5rem;
+        text-shadow: var(--shadow);
+        padding-top: 3.5rem;
+    }
+    .linkSpotifyWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 8rem;
+    }
+    .linkSpotifyDecoration {
+        font-size: 3.5rem;
+        padding: 0 1rem;
+        text-shadow: var(--shadow);
+    }
+    .linkSpotify:link, .linkSpotify:visited {
+        text-decoration: none;
+        font-size: 3.5rem;
+        text-shadow: var(--shadow);
+    }
+    .logoSpotify {
+        width: 3.5rem;
+        margin-right: 1rem;
+    }
+
+    /*REGALO*/
+    .regalo {
+        position: relative;
+    }
+    .dragonCurva {
+        width:100%;
+        position: absolute;
+    }
+    .regaloTitulo {
+        font-size: 4rem;
+        text-shadow: var(--shadow);
+        padding: 12rem 0 0 25rem;
+    }
+    .recaudacion {
+        font-size: 2.5rem;
+        text-shadow: var(--shadow);
+        text-align: justify;
+        width: 85%;
+        padding: 17rem 0 0 5rem;
+    }
+    .CBU {
+        font-size: 1rem;
+        text-shadow: var(--shadow);
+        padding: 11rem 0 0 15rem;
+    }
+    /*===============================CONFIRMACION===============================*/
+    .confirmacionWrapper {
+        width: 100%;
+        background-color: var(--main-green);
+    }
+    .spellContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3rem;
+    }
+    .hechizo-5 {
+        width: 25%;
+    }
+    .hechizo-6 {
+        width: 40%;
+    }
+    .confirmacionTitle {
+        font-size: 5.5rem;
+        text-align: center;
+        text-shadow: var(--shadow);
+    }
+    .confirmationInfo {
+        margin: 6rem 10%;
+        font-size: 2rem;
+        width: 80%;
+        text-align: center;
+        text-shadow: var(--shadow);
+    }
+    .confirmationLinkContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .confirmationDecoration,
+    .confrimationLink:link,
+    .confrimationLink:visited {
+        font-size: 3.5rem;
+        padding: 0 0.75rem;
+        text-decoration: none;
+        text-shadow: var(--shadow);
+    }
+    .confrimationLink:active,
+    .confrimationLink:hover {
+        text-decoration: overline;
+    }
+    /*==================================FOOTER==================================*/
+    .footer {
+        background-color: var(--main-green);
+        width: 100%;
+    }
+    .footerImg {
+        width: 100%;
+    }
+
+}
+/*=================================COMPUTADORAS=================================*/
+/*==Toda pantalla que tenga más o al menos 1024px de ancho tendrá este estilo==*/
+@media screen and (min-width: 1024px) {
+
+    /*================================CABECERA================================*/
+    /*LANDING*/
+    /*NAVBAR*/
+    /*================================INVITACION================================*/
+    /*=============================NUESTRA HISTORIA=============================*/
+    /*========================INVITACION (IGLESIA + SALON)=======================*/
+    /*===============================NOCHE MAGICA===============================*/
+    /*SPOTIFY*/
+    /*REGALO*/
+    /*===============================CONFIRMACION===============================*/
+    /*==================================FOOTER==================================*/
+    
+}

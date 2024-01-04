@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Flor & Javi</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.cdnfonts.com/css/dumbledor-1" rel="stylesheet">
+        <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    </head>
+    <body>
+        <div class="pageWrapper">
+
+            <!--========================================================CABECERA========================================================-->
+            <div class="landing">
+                <div class="welcomeImgWrapper">
+                    <img src="img/home-img-cover.jpeg" alt="foto de presentación a la invitación" class="welcomeImg">
+                    <img src="img/filtro-cabecera-con-logo.png" alt="foto de presentación a la invitación" class="filtro">
+                </div>
+            </div>
+            <div class="navBarWrapper">
+                <div class="navBar">
+                    <p class="navBarSeparator">&#9830;</p>
+                    <div class="navBarButton">
+                        <a href="#nuestraHistoria" class="navBarLink">Nuestra Historia</a>
+                    </div>
+                    <p class="navBarSeparator">&#9830;</p>
+                    <div class="navBarButton">
+                        <a href="#iglesia" class="navBarLink">Iglesia</a>
+                    </div>
+                    <p class="navBarSeparator">&#9830;</p>
+                    <div class="navBarButton">
+                        <a href="#fiesta" class="navBarLink">Fiesta</a>
+                    </div>
+                    <p class="navBarSeparator">&#9830;</p>
+                    <div class="navBarButton">
+                        <a href="#nocheMagica" class="navBarLink">Noche Mágica</a>
+                    </div>
+                    <p class="navBarSeparator">&#9830;</p>
+                    <div class="navBarButton">
+                        <a href="#confirmacion" class="navBarLink">Confirmación</a>
+                    </div>
+                    <p class="navBarSeparator">&#9830;</p>
+                </div>
+            </div>
+            <!--=======================================================INVITACION=======================================================-->
+            <div class="invitacionContainer">
+                <div class="invitacionWrapper">
+                    <div class="tituloWrapper">
+                        <h2 class="titulo subtitulo">Te invitamos a celebrar</h2>
+                        <h1 class="titulo principal">Nuestra Unión</h1>
+                        <h3 class="titulo anuncio">A tan solo:</h3>
+                    </div>
+                    <div class="countDownWrapper">
+                        <script>
+                            // Set the date we're counting down to
+                            var countDownDate = new Date("Feb 3, 2024 18:45:00").getTime();
+                            
+                            // Update the count down every 1 second
+                            var x = setInterval(function() {
+                            
+                              // Get today's date and time
+                              var now = new Date().getTime();
+                            
+                              // Find the distance between now and the count down date
+                              var distance = countDownDate - now;
+                            
+                              // Time calculations for days, hours, minutes and seconds
+                              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                              // Display the result in the element with id="demo"
+                              document.getElementById("days").innerHTML = days;
+                              document.getElementById("hours").innerHTML = hours;
+                              document.getElementById("minutes").innerHTML = minutes;
+                              document.getElementById("seconds").innerHTML = seconds;
+                            
+                              // If the count down is finished, write some text
+                              if (distance < 0) {
+                                clearInterval(x);
+                                document.getElementById("finished").innerHTML = "A CELEBRAR!";
+                              }
+                            }, 1000);
+                        </script>
+                        <div class="countDown" id="finished">
+                            <div class="countDownBox">
+                                <h4 id="days" class="timer">XX</h4>
+                                <h4 class="unit">Días</h4>
+                            </div>
+                            <p class="countDownSeparator">&#9830;</p>
+                            <div class="countDownBox">
+                                <h4 id="hours" class="timer">XX</h4>
+                                <h4 class="unit">hs</h4>
+                            </div>
+                            <p class="countDownSeparator">&#9830;</p>
+                            <div class="countDownBox">
+                                <h4 id="minutes" class="timer">XX</h4>
+                                <h4 class="unit">min</h4>
+                            </div>
+                            <p class="countDownSeparator">&#9830;</p>
+                            <div class="countDownBox">
+                                <h4 id="seconds" class="timer">XX</h4>
+                                <h4 class="unit">seg</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="img/dragones-con-sombra.png" alt="" class="dragones">
+            </div>
+            <!--====================================================NUESTRA HISTORIA====================================================-->
+            <div class="historiaWrapper" id="nuestraHistoria">
+                <h2 class="historiaTitulo">Nuestra Historia:</h2>
+                <img src="img/historia1.JPG" alt="" class="historia-1">
+                <h3 class="inicioHistoria">Érase una vez......</h3>
+                <p class="parrafo-1 parrafoHistoria">
+                    dos enamorados de la fantasía y la naturaleza. Tuvieron la suerte de encontrarse con tan solo 20 años, pudiendo transitar de la mano momentos de cambio y crecimiento juntos.
+                    <br>
+                    Ellos siempre fueron grandes compañeros. Su vínculo fue natural y cálido desde aquel cumpleaños en el que se reencontraron, luego de compartir un cuatrimestre de facultad como compañeros. Desde entonces permanecieron juntos.
+                </p>
+                <img src="img/historia-2.JPG" alt="" class="historia-2 historiaImg">
+                <img src="img/historia-3.jpg" alt="" class="historia-3 historiaImg">
+                <img src="img/historia-4.jpg" alt="" class="historia-4 historiaImg">
+                <img src="img/historia-5.jpg" alt="" class="historia-5 historiaImg">
+                <p class="parrafo-2 parrafoHistoria">
+                    Sus gustos en común los convirtieron, además, en grandes amigos. Les gustaron siempre las mismas series, y disfrutaban debatir teorías de sus libros favoritos o compartir mates en el parque. Encontraban goce en lo sencillo, porque juntos supieron ver mucha belleza en lo cotidiano.
+                </p>
+                <p class="parrafo-3 parrafoHistoria">
+                    Pasaron 7 años como novios en los  que solamente se podían ver los fines de semana. Anhelaban el momento de encontrarse con una intensidad que no perdieron ni aún cuando comenzaron a convivir. 
+                </p>
+                <p class="parrafo-4 parrafoHistoria">
+                    Sus encuentros siempre estuvieron llenos de risa y música (y “algunas” conversaciones clásicamente calificadas como nerds). Más tarde encontraron lo divertido que era salir a bailar juntos, y no pararon (clásicamente calificados como manijas).
+                    <br>
+                </p>
+                <p class="parrafo-5 parrafoHistoria">
+                    Juntos viajaron y se maravillaron con la belleza de las montañas patagónicas, las sierras cuyanas, y las playas y arrecifes de coral de la Riviera Maya, aunque el viento siempre cambiante de Mar del Plata sería su refugio cada vez que lo necesitaran.
+                    <br>
+                    El amor de Javi y Flor fue bello desde su inicio, y la certeza de su infinidad siempre estuvo presente entre ellos. Hoy, quieren invitarte a celebrar la magia de su amor.
+                    <br>
+                    Javi y Flor se casan y quieren que seas parte de una celebración con toda su impronta.
+                </p>
+                <img src="img/hechizo-1.png" alt="" class="hechizo hechizo-1">
+                <img src="img/hechizo-2.png" alt="" class="hechizo hechizo-2">
+                <img src="img/hechizo-3.png" alt="" class="hechizo hechizo-3">
+            </div>
+            <!--========================================================IGLESIA========================================================-->
+            <div class="informacionWrapper" id="iglesia">
+                <h2 class="infoTitulo">La Ceremonia</h2>
+                <div class="detallesWrapper">
+                    <img src="img/iglesia.JPG" alt="foto de la seccion de invitacion a la iglesia" class="infoImg">
+                    <div class="detallesContainer">
+                        <div class="nombreContainer">
+                            <h4 class="detallesNombre">Parroquia Nuestra Señora de la Candelaria</h4>
+                        </div>
+                        <div class="invitacionDetallesContainer">
+                            <img src="img/ubicacion.png" alt="logo de ubicación para la info" class="logo">
+                            <h4 class="detallesInfo">Bahía Blanca 363, CABA</h4>
+                        </div>
+                        <div class="invitacionDetallesContainer">
+                            <img src="img/sunrises.png" alt="logo del momento del día para ceremonia" class="logo">
+                            <h4 class="detallesInfo">18:45hs</h4>
+                        </div>
+                        <div class="invitacionDetallesContainer">
+                            <img src="img/vestimenta-dorado.png" alt="logo para vestimenta" class="logo">
+                            <h4 class="detallesInfo">Vestimenta elegante</h4>
+                        </div>
+                        <div class="detallesLinkContainer">
+                            <p class="detallesLinkDecoration">&#9830;</p>
+                            <a target="_blank" class="detallesLink" href="https://www.google.com/maps/place/Parroquia+Nuestra+Se%C3%B1ora+de+la+Candelaria/@-34.629238,-58.4845869,16.75z/data=!4m6!3m5!1s0x95bcc99443e554cf:0xb259da59ded199d6!8m2!3d-34.6296064!4d-58.4819516!16s%2Fg%2F11b7c2y326?entry=ttu">
+                                Ver en el Mapa
+                            </a>
+                            <p class="detallesLinkDecoration">&#9830;</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--=========================================================SALON=========================================================-->
+            <div class="informacionWrapper" id="fiesta">
+                <h2 class="infoTitulo">La Fiesta</h2>
+                <div class="detallesWrapper">
+                    <div class="detallesContainer">
+                        <div class="nombreContainer">
+                            <h4 class="detallesNombre">Asociación de Médicos Municipales</h4>
+                        </div>
+                        <div class="invitacionDetallesContainer">
+                            <img src="img/ubicacion.png" alt="logo de ubicación para la info" class="logo">
+                            <h4 class="detallesInfo">Balbastro 3250, CABA</h4>
+                        </div>
+                        <div class="invitacionDetallesContainer">
+                            <img src="img/nightime.png" alt="logo del momento del día para ceremonia" class="logo">
+                            <h4 class="detallesInfo">21hs a 3:30hs</h4>
+                        </div>
+                        <div class="invitacionDetallesContainer">
+                            <img src="img/vestimenta-dorado.png" alt="logo para vestimenta" class="logo">
+                            <h4 class="detallesInfo">Vestimenta elegante</h4>
+                        </div>
+                        <div class="detallesLinkContainer">
+                            <p class="detallesLinkDecoration">&#9830;</p>
+                            <a target="_blank" class="detallesLink" href="https://www.google.com/maps/place/Asociacion+de+Medicos+Municipales+Caba/@-34.6517785,-58.4563555,15z/data=!4m2!3m1!1s0x0:0xb1ae487b8701076b?sa=X&ved=2ahUKEwiQuZiXkcODAxWPrpUCHSRnCgQQ_BJ6BAg8EAA">
+                                Ver en el Mapa
+                            </a>
+                            <p class="detallesLinkDecoration">&#9830;</p>
+                        </div>
+                    </div>
+                    <img src="img/fiesta.JPG" alt="" class="infoImg">
+                </div>
+            </div>
+            <!--======================================================NOCHE MAGICA======================================================-->
+            <div class="nocheMagicaWrapper" id="nocheMagica">
+                <div class="spotify">
+                    <img src="img/hechizo-3.png" alt="" class="hechizo-4 hechizo">
+                    <h3 class="nocheMagicaTitle">Ayudanos a que esta noche sea mágica y única</h3>
+                    <p class="recomendaMusica">
+                        Recomendanos esa canción que no puede faltar!
+                        <br>
+                        Agregala a nuestra lista de Spotify:
+                    </p>
+                    <div class="linkSpotifyWrapper">
+                        <p class="linkSpotifyDecoration">&#9830;</p>
+                        <img src="img/spotify.png" alt="" class="logoSpotify">
+                        <a class="linkSpotify" target="_blank" href="https://open.spotify.com/playlist/7oDLAKtM7Jz37ZXnuNhNMm?si=ed22a6e5727344d2&pt=1032c58e32b63ec7060dda79ac709a9c">
+                            Lista Spotify
+                        </a>
+                        <p class="linkSpotifyDecoration">&#9830;</p>
+                    </div>
+                </div>
+                <div class="regalo">
+                    <img src="img/dragon-curvas.png" alt="" class="dragonCurva">
+                    <h3 class="regaloTitulo">Sugerencia de regalo</h3>
+                    <p class="recaudacion">
+                        La oportunidad de celebrar nuestro amor, felicidad y alegría junto a las personas que más queremos es el regalo más importante para nosotros.
+                        <br>
+                        Pero si deseas obsequiarnos algo, podés ayudar a que logremos nuestra luna de miel soñada!
+                    </p>
+                    <p class="CBU">
+                        CBU: 0720166688000037219718
+                        <br>
+                        Alias: TORMENTA.HIELO.FUEGO
+                    </p>
+                </div>
+            </div>
+            <!--======================================================CONFIRMACION======================================================-->
+            <div class="confirmacionWrapper" id="confirmacion">
+                <div class="spellContainer">
+                    <img src="img/hechizo-2.png" alt="" class="hechizo-5">
+                    <img src="img/hechizo-4.png" alt="" class="hechizo-6">
+                </div>
+                <h3 class="confirmacionTitle">
+                    Confirmación de asistencia
+                </h3>
+                <p class="confirmationInfo">
+                    ¡Queremos que formes parte de nuestro casamientom, te pedimos que nos confirmes tu presencia!
+                    <br><br>
+                    Si tenés alguna restricción alimenticia (Vegetarianismo, veganismo, celiaquía u otra) hacenoslo saber en el suguiente formulario: 
+                </p>
+                <div class="confirmationLinkContainer">
+                    <p class="confirmationDecoration">&#9830</p>
+                    <a href="https://docs.google.com/forms/d/1l4jbU7_ajfJlIh-PIqZVUhBx27TQV_HCPfzEc3Yfyv0/edit" class="confrimationLink" target="_blank">
+                        Confirmá acá!
+                    </a>
+                    <p class="confirmationDecoration">&#9830</p>
+                </div>
+            </div>
+            <!--=========================================================FOOTER=========================================================-->
+            <div class="footer">
+                <img src="img/footer.png" alt="" class="footerImg">
+            </div>
+        </div>
+    </body>
+</html>

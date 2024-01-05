@@ -37,6 +37,9 @@ a {
     body {
         overflow-x: hidden;
     }
+    .pageWrapper {
+        background-color: var(--main-green);
+    }
     /*================================CABECERA================================*/
     /*LANDING*/
     .welcomeImgWrapper {

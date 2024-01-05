@@ -339,7 +339,6 @@ a {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding-bottom: 1.5rem;
     }
     .dragonCurva {
         width:100%;
@@ -358,8 +357,9 @@ a {
         padding: 5rem 7% 3rem  7%;
     }
     .CBU {
+        border: 1px solid red;
         font-size: 1rem;
-        text-shadow: var(--shadow);
+        padding-bottom: 1.5rem;
     }
     /*===============================CONFIRMACION===============================*/
     .confirmacionWrapper {

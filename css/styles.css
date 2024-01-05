@@ -30,6 +30,10 @@ a {
 /*=====Toda pantalla que tenga menos de 1024px de ancho tendrá este estilo=====*/
 @media screen and (max-width: 1023px) {
 
+    .comingSoon {
+        display: none;
+    }
+
     body {
         overflow-x: hidden;
     }
@@ -422,7 +426,7 @@ a {
 /*=================================COMPUTADORAS=================================*/
 /*==Toda pantalla que tenga más o al menos 1024px de ancho tendrá este estilo==*/
 @media screen and (min-width: 1024px) {
-
+    
     /*================================CABECERA================================*/
     /*LANDING*/
     /*NAVBAR*/
@@ -435,4 +439,28 @@ a {
     /*===============================CONFIRMACION===============================*/
     /*==================================FOOTER==================================*/
     
+
+    /*===============================COMING SOON===============================*/
+    .pageWrapper {
+        display:none;
+    }
+    .comingSoon {
+        width: 100vw;
+        height: 100vh;
+        background-image: radial-gradient(var(--main-green-light) 25%, var(--main-green));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .comingSoonTitleContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    .comingSoonTitle {
+        font-size: 5rem;
+        text-shadow: var(--shadow);
+    }
+    .logoComingSoon {
+        height: 50%;
+    }
 }

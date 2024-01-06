@@ -359,9 +359,12 @@ a {
         width: 86%;
         padding: 5rem 7% 3rem  7%;
     }
-    .CBU {
-        font-size: 1rem;
+    .cbu {
+        width: 100%;
+        text-align: center;
+        font-size: 1.4rem;
         padding-bottom: 1.5rem;
+        text-shadow: var(--shadow);
     }
     /*===============================CONFIRMACION===============================*/
     .confirmacionWrapper {
@@ -372,17 +375,18 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-top: 4rem;
     }
-    .hechizo-5 {
+    /*.hechizo-5 {
         width: 25%;
         padding: 3rem 7rem 0 0;
-    }
+    }*/
     .hechizo-6 {
         margin-left: 25%;
         width: 33%;
     }
     .confirmacionTitle {
-        padding-top: 4.5rem;
+        padding-top: 6.5rem;
         font-size: 5.5rem;
         text-align: center;
         text-shadow: var(--shadow);

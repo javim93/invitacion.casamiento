@@ -46,9 +46,14 @@ a {
         position: relative;
         height: 40.5rem;
     }
-    .welcomeImg, .filtro {
+    .welcomeImg, .welcomeLogo {
         width: 100%;
         position: absolute;    
+    }
+    .welcomeLogo {
+        width: 20rem;
+        margin-top: 19rem;
+        margin-left: 5rem;
     }
     
     /*NAVBAR*/
@@ -87,10 +92,10 @@ a {
         display: flex;
         justify-content: center;
         align-items: flex-start;
+        flex-direction: column;
         position: relative;
     }
-    .invitacionWrapper {        
-        width: 80%;
+    .invitacionWrapper {
         text-align: center;
         padding-top: 5rem;
     }
@@ -101,36 +106,34 @@ a {
         font-size: 6rem;
     }
     .subtitulo {
-        font-size: 5.5rem;
+        font-size: 4rem;
     }
-    .anuncio {
-        font-size: 5.7rem;
-        padding-top: 10rem;
-    }
-    .countDown {
+    .titleContainer {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        padding: 9rem 0;
+        padding-top: 4.5rem;
     }
-    .countDownBox {
-        width: 25%;
+    .titleDecoration {
+        height: 6rem;
+        margin: 0 1rem;
     }
-    .timer, .unit {
-        font-size: 6rem;
+    .agradecimiento {
+        margin: auto;
+        padding-top: 4rem;
+        text-align: justify;
+        width: 65%;
         text-shadow: var(--shadow);
-    }
-    .unit {
-        font-size: 2rem;
-    }
-    .countDownSeparator {
-        width: 2rem;
+        font-size: 3rem;
     }
     .dragones {
         width: 100%;
         position: absolute;
-        top: 4.5rem;
         z-index: 1;
+        top: 10rem;
+    }
+    .divisor {
+        width: 100%;
     }
     /*=============================NUESTRA HISTORIA=============================*/
     .historiaWrapper {
@@ -223,13 +226,35 @@ a {
         right: 3rem;
         top: 104rem;
     }
-    /*=======================INFORMACION (IGLESIA + SALON)=======================*/
+    /*==================================VIDEOS==================================*/
+    .videosContainer {
+        padding: 4rem 0;
+        /*position: relative;
+        height: 32rem;*/
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .videoDiv {
+        text-align: center;
+    }
+    .videoTitle {
+        font-size: 1.7rem;
+        text-shadow: var(--shadow);
+    }
+    .thumbnail {
+        width: 18rem;
+        height: 12rem;
+        border: 1px solid var(--main-gold);
+    }
+    /*======================INFORMACION (IGLESIA + SALON)======================*/
     .informacionWrapper {
         width: 100%;
         background-color: var(--main-green);
         display: flex;
         align-items: center;
         flex-direction: column;
+        position: relative;
     }
     .infoTitulo {
         width: 100%;
@@ -240,188 +265,113 @@ a {
     }
     .detallesWrapper {
         display: flex;
+        flex-direction: column;
         justify-content:space-evenly;
         align-items: center;
         padding: 5rem 0;
-    }
-    .invitacionDetallesContainer, .nombreContainer {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    .invitacionDetallesContainer {
-        padding-left: 2rem;
-    }
-    .detallesNombre {
-        font-size: 2.3rem;
-        padding-bottom: 1.5rem;
         text-shadow: var(--shadow);
     }
-    .detallesInfo {
-        font-size: 2.2rem;
-        padding: 0.5rem 0;
-        text-shadow: var(--shadow);
+    .enlaceAlbum, .enlaceAlbum:visited {
+        font-size: 1.8rem;
+        font-weight: 600;
     }
-    .logo {
-        width: 1.5rem;
-        margin: 0 0.75rem;
-    }
-    .detallesLinkContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem 0;
-    }
-    .detallesLink:link, 
-    .detallesLink:visited,
-    .detallesLink:hover,
-    .detallesLink:active {
-        font-size: 2.2rem;
-        text-shadow: var(--shadow);
-    }
-    .detallesLink:hover, .detallesLink:active {
+    .enlaceAlbum:active, .enlaceAlbum:hover {
+        font-size: 1.8rem;
+        font-weight: 600;
         text-decoration: overline;
     }
-    .detallesLinkDecoration {
-        margin: 0 0.5rem;
-        width: 2.2rem;
+    .album {
+        border: 1px solid var(--main-gold);
+        width: 40rem;
+        height: 27rem;
     }
-    .infoImg {
-        width: 40%;
+    .floater0, .floater1, .floater2 {
+        position: absolute;
+        z-index: 1;
+    }
+    .floater0 {
+        top: 5rem;
+    }
+    .floater1 {
+        top: -9rem;
+    }
+    .floater2 {
+        top: -22em;
+    }
+    .elevated {
+        z-index: 2;
+    }
+    /*==================================CLIP==================================*/
+    .clipWrapper {
+        width: 100%;
+        background-color: var(--main-green);
+    }
+    /*===============================COMPARTI===============================*/
+    .compartiWrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 4rem 0;
+    }
+    .compartiText, .compartiThumbnailContainer {
+        width: 20rem;
+    }
+    .compartiThumbnailContainer {
+        height: 26.667rem;
         border: 1px solid var(--main-gold);
     }
-    /*===============================NOCHE MAGICA===============================*/
-    
-    /*SPOTIFY*/
-    .nocheMagicaWrapper {
+    .compartiThumbnail {
         width: 100%;
-        background-color: var(--main-green);
     }
-    .hechizo-4 {
-        width: 30%;
-        left: 35%;
-        padding-top: 5rem;
-    }
-    .nocheMagicaTitle {
-        text-align: center;
-        font-size: 5rem;
-        text-shadow: var(--shadow);
-        padding-top: 40rem;
-    }
-    .recomendaMusica {
-        text-align: center;
-        font-size: 2.5rem;
-        text-shadow: var(--shadow);
-        padding-top: 3.5rem;
-    }
-    .linkSpotifyWrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 8rem;
-    }
-    .linkSpotifyDecoration {
-        width: 3.5rem;
-        margin: 0 1rem;
-        text-shadow: var(--shadow);
-    }
-    .linkSpotify:link, .linkSpotify:visited {
-        text-decoration: none;
-        font-size: 3.5rem;
-        text-shadow: var(--shadow);
-    }
-    .logoSpotify {
-        width: 3.5rem;
-        margin-right: 1rem;
-    }
-
-    /*REGALO*/
-    .regalo {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .dragonCurva {
-        width:100%;
-        position: absolute;
-    }
-    .regaloTitulo {
-        width: 100%;
-        font-size: 4rem;
-        text-shadow: var(--shadow);
-        padding: 12rem 3rem 0 0;
-        text-align: end;
-    }
-    .recaudacion {
-        font-size: 2.5rem;
-        text-shadow: var(--shadow);
+    .compartiText {
         text-align: justify;
-        width: 86%;
-        padding: 5rem 2.5rem 3rem  2.5rem;
-    }
-    .cbu {
-        width: 100%;
-        text-align: center;
-        font-size: 1.2rem;
-        padding-bottom: 1.5rem;
+        font-size: 2.4rem;
         text-shadow: var(--shadow);
     }
-    /*===============================CONFIRMACION===============================*/
-    .confirmacionWrapper {
+    /*=================================VENDORS=================================*/
+    .vendorsWrapper {
         width: 100%;
-        background-color: var(--main-green);
+        padding: 8rem 0;
     }
-    .spellContainer {
+    .vendorsTitle {
+        font-size: 1.5rem;
+        text-align: justify;
+        text-shadow: var(--shadow);
+        padding: 0 8rem;
+    }
+    .vendorsDiv {
         display: flex;
+        padding: 1.5rem 0;
+        justify-content: space-evenly;
+    }
+    .vendorDivColumn {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-items: center;
-        padding-top: 4rem;
+        padding: 4.5rem 0;
     }
-    /*.hechizo-5 {
-        width: 25%;
-        padding: 3rem 7rem 0 0;
-    }*/
-    .hechizo-6 {
-        margin-left: 25%;
-        width: 33%;
-    }
-    .confirmacionTitle {
-        padding-top: 6.5rem;
-        font-size: 5.5rem;
-        text-align: center;
-        text-shadow: var(--shadow);
-    }
-    .confirmationInfo {
-        margin: 6rem 10%;
+    .vendorName {
         font-size: 2rem;
-        width: 80%;
-        text-align: center;
         text-shadow: var(--shadow);
     }
-    .confirmationLinkContainer {
+    .iconoIg {
+        width: 2rem;
+        margin: 0 0.5rem;
+    }
+    .vendorLink, .vendorLink:hover {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 1.5rem;
-    }
-    .confirmationDecoration {
-        width: 3.5rem;
-        margin: 0 0.75rem;
-    }
-    .confrimationLink:link,
-    .confrimationLink:visited {
-        font-size: 3.5rem;
-        padding: 0 0.75rem;
+        position: relative;
+        padding: 1.5rem;
         text-decoration: none;
-        text-shadow: var(--shadow);
-    }
-    .confrimationLink:active,
-    .confrimationLink:hover {
-        text-decoration: overline;
     }
     /*==================================FOOTER==================================*/
+    .quote {
+        padding: 0 8rem 4rem 8rem;
+        text-shadow: var(--shadow);
+        font-size: 2rem;
+        text-align: justify;
+    }
     .footer {
         background-color: var(--main-green);
         width: 100%;
